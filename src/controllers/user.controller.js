@@ -28,3 +28,11 @@ exports.login = async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 };
+
+// 👇 GET USERS
+exports.getUsers = async (req, res) => {
+  res.json({
+    message: "Lấy danh sách user thành công",
+    user: req.user
+  });
+};
